@@ -1,15 +1,20 @@
 function getComputerChoice(){
     computerPlay = Math.floor(Math.random() * 3);
-    console.log(computerPlay)
 
-    if (computerPlay = 0)  {
-       computerPlay = 'Rock';
-    } else if (computerPlay = 1){
-       computerPlay = 'Paper';
+    if (computerPlay == 0)  {
+       return 'Rock';
+    } else if (computerPlay == 1){
+       return 'Paper';
     } else {
-       computerPlay = 'Scissors';
+       return'Scissors';
     }
-    return computerPlay
 }
 
 console.log(getComputerChoice())
+
+function getHumanChoice(){
+    humanPlay = prompt('Type your play', 'Rock,paper or scissors.')
+    return humanPlay.toLowerCase();
+}
+
+console.log(getHumanChoice())
