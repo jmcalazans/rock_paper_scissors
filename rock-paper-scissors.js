@@ -10,8 +10,19 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-    humanPlay = prompt('Type your play');
-    return humanPlay.toLowerCase();
+    while(true){
+        input = prompt('Type your play (Rock, Paper or Scissors):');
+        humanplay = input.toLowercase()
+        if (humanPlay == 'rock'){
+            return 'rock';
+        } else if (humanPlay == 'paper'){
+            return 'paper';
+        } else if (humanPlay == 'scissors'){
+            return 'scissors';
+        } else {
+            continue;
+        }
+    }
 }
 
 let humanScore = 0, computerScore = 0
